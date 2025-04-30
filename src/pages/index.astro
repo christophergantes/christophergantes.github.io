@@ -1,16 +1,52 @@
 ---
+import Hero from "../components/Hero.astro";
+import Skill from "../components/Skill.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
+const skills = [
+  "Python",
+  "JavaScript",
+  "Java",
+  "Go",
+  "React",
+  "Svelte",
+  "Tailwind",
+  "Node.js",
+  "Express",
+  "FastAPI",
+  "Flask",
+  "Spring Boot",
+  "PyTorch",
+  "Hugging Face",
+  "Scikit-learn",
+  "MLflow",
+  "Numpy",
+  "Pandas",
+  "Matplotlib",
+  "Docker",
+  "Git",
+];
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
-</html>
+<BaseLayout>
+  <section>
+    <Hero title="Hello, World!" tagline="My name is Christopher Gantes">
+      <img
+        class="h-auto w-full max-w-2xs flex-auto rounded-4xl"
+        src="/me.JPG"
+      />
+    </Hero>
+  </section>
+  <section>
+    <div class="m-auto max-w-4xl">
+      <p class="text-center text-3xl">
+        Skills<p>
+          <br />
+          <div class="flex flex-wrap justify-center gap-x-5 gap-y-2">
+            {skills.map((skill) => <Skill skill={skill} />)}
+          </div>
+        </p>
+      </p>
+    </div>
+  </section></BaseLayout
+>

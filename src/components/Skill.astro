@@ -1,0 +1,15 @@
+---
+import "../styles/global.css";
+const { skill } = Astro.props;
+---
+
+<div
+  class="flex h-16 items-center gap-5 rounded-full border-solid border-black p-5 outline"
+>
+  <span>{skill}</span>
+  <img
+    class="inline h-auto max-w-10"
+    src=`/icons/${skill.toLowerCase()}.png`
+    alt=`${skill} logo`
+  />
+</div>
