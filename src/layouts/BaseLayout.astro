@@ -2,8 +2,8 @@
 import "../styles/global.css";
 
 import MainHead from "../components/MainHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+// import Footer from "../components/Footer.astro";
+import NavBar from "../components/NavBar.astro";
 
 const { pageTitle = "Christopher Gantes" } = Astro.props;
 ---
@@ -12,11 +12,15 @@ const { pageTitle = "Christopher Gantes" } = Astro.props;
   <head>
     <MainHead pageTitle={pageTitle} />
   </head>
-  <body class="h-screen">
-    <div class="min-h-full flex flex-col justify-between">
-      <Header />
-      <slot />
-      <Footer />
+  <body class="h-screen bg-neutral-950 text-white">
+    <div
+      class="m-auto flex max-w-[1440px] flex-col justify-between pr-10 pl-10 sm:pr-24 sm:pl-24"
+    >
+      <NavBar />
+      <main>
+        <slot />
+      </main>
+      <!-- <Footer /> -->
     </div>
   </body>
 </html>

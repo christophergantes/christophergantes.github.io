@@ -1,52 +1,82 @@
 ---
-import Hero from "../components/Hero.astro";
-import Skill from "../components/Skill.astro";
+// import Skill from "../components/Skill.astro";
+import Socials from "../components/Socials.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const skills = [
-  "Python",
-  "JavaScript",
-  "Java",
-  "Go",
-  "React",
-  "Svelte",
-  "Tailwind",
-  "Node.js",
-  "Express",
-  "FastAPI",
-  "Flask",
-  "Spring Boot",
-  "PyTorch",
-  "Hugging Face",
-  "Scikit-learn",
-  "MLflow",
-  "Numpy",
-  "Pandas",
-  "Matplotlib",
-  "Docker",
-  "Git",
-];
+// const skills = [
+//   "Python",
+//   "JavaScript",
+//   "Java",
+//   "Go",
+//   "React",
+//   "Svelte",
+//   "Tailwind",
+//   "Node.js",
+//   "Express",
+//   "FastAPI",
+//   "Flask",
+//   "Spring Boot",
+//   "PyTorch",
+//   "Hugging Face",
+//   "Scikit-learn",
+//   "MLflow",
+//   "Numpy",
+//   "Pandas",
+//   "Matplotlib",
+//   "Docker",
+//   "Git",
+// ];
 ---
 
 <BaseLayout>
-  <section>
-    <Hero title="Hello, World!" tagline="My name is Christopher Gantes">
+  <header
+    class="flex w-full flex-wrap items-end justify-start gap-12 md:justify-between"
+  >
+    <div
+      class="group flex flex-auto min-[850px]:flex-1 lg:max-w-lg xl:max-w-xl"
+    >
       <img
-        class="h-auto w-full max-w-2xs flex-auto rounded-4xl"
-        src="/me.JPG"
+        src="/photos/polaroid.jpeg"
+        class="w-full flex-auto shadow-md shadow-white transition-transform group-hover:-translate-y-10"
       />
-    </Hero>
-  </section>
-  <section>
-    <div class="m-auto max-w-4xl">
-      <p class="text-center text-3xl">
-        Skills<p>
-          <br />
-          <div class="flex flex-wrap justify-center gap-x-5 gap-y-2">
-            {skills.map((skill) => <Skill skill={skill} />)}
-          </div>
-        </p>
-      </p>
     </div>
-  </section></BaseLayout
->
+    <div class="flex-auto sm:flex-1">
+      <h1 class="font-serif text-3xl sm:text-4xl">
+        I'm Chris, a software developer from Atlanta.
+      </h1>
+      <br />
+      <p>
+        I currently am working on deploying a few projects. I have interests in
+        software architecture, machine learning, and UI/UX.
+      </p>
+      <br />
+      <p>
+        My hobbies are photography, making music, and watching films. You might
+        see a post about one of these soon!
+      </p>
+      <br />
+      <div class="justify-self-center md:justify-self-auto">
+        <Socials />
+      </div>
+    </div>
+  </header>
+
+  <!-- <hr class="mt-12 mb-12 bg-white" />
+
+  <section>
+    <h2 class="text-center font-serif text-4xl md:text-left">Skills</h2>
+    <br />
+    <div class="flex flex-wrap justify-center gap-5">
+      {skills.map((skill) => <Skill skill={skill} />)}
+    </div>
+  </section>
+
+  <hr class="mt-12 mb-12 bg-white" />
+
+  <section>
+    <h2 class="text-center font-serif text-4xl md:text-left">Projects</h2>
+  </section>
+  <hr class="mt-12" /> -->
+
+  <section class="pb-48"></section>
+</BaseLayout>
